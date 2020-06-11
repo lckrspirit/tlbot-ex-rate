@@ -84,8 +84,8 @@ class DataPrepare(PageActions):
 				else:
 					if val not in old_dict.values():
 						return True
-					else:
-						return False
+			return False
+				
 
 
 class PushNotify:
@@ -116,7 +116,6 @@ class Applicaion:
 		if self.datepage.compare_dump():
 			self.notify.send_notify(self.datepage.compare_purchase())
 			self.page.log_write(self.datepage.DICT_VALUES)
-			print('all good')
 		else:
 			sys.exit()
 
